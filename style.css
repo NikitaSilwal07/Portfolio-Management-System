@@ -28,6 +28,7 @@ header {
 
 header.scrolled {
     background: #222;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -82,6 +83,10 @@ main {
     margin-top: 100px;
 }
 
+section {
+    scroll-margin-top: 100px; /* Ensures smooth scrolling below the fixed header */
+}
+
 .section-padding {
     padding: 60px 0;
 }
@@ -93,27 +98,56 @@ main {
     color: #333;
 }
 
-.about-grid,
-.skills-grid,
-.projects-carousel,
-.contact-grid {
+/* About Section - Image Right, Text Left */
+.about-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-image img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        justify-content: center;
+    }
+}
+
+/* Keep Skills in Horizontal Layout */
+.skills-grid {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
 }
 
-.about-text p,
-.skill p {
-    font-size: 18px;
-    color: #666;
-}
-
-.about-image img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.skill {
+    flex: 1;
+    min-width: 200px;
 }
 
 .skill h3 {
@@ -126,23 +160,35 @@ main {
     color: #777;
 }
 
+/* Projects Section */
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
 .project h3 {
     font-size: 22px;
     margin-bottom: 10px;
 }
 
 .project p {
-    font-size: 16px;
+    font-size: 18px;
     color: #777;
+    line-height: 1.8; /* Increased line spacing for better readability */
+    margin-bottom: 15px;
 }
 
 .project a {
+    display: inline-block;
     text-decoration: none;
     color: #fff;
     background: #333;
-    padding: 10px 20px;
+    padding: 12px 18px;
     border-radius: 5px;
     transition: background 0.3s;
+    font-size: 16px;
 }
 
 .project a:hover {
@@ -215,8 +261,12 @@ footer {
         text-align: center;
     }
 
+ 
+    .skills-grid {
+        justify-content: center;
+    }
+
     .about-grid,
-    .skills-grid,
     .projects-carousel,
     .contact-grid {
         flex-direction: column;

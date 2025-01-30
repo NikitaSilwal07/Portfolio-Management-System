@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Nikita Silwal" />
     <title>Nikita Silwal - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -16,16 +17,16 @@
         <div class="logo">
           <h1>NIKITA SILWAL</h1>
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <div class="hamburger" onclick="toggleMenu()">
+          <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
-          </div>
+          </button>
         </nav>
       </div>
     </header>
@@ -38,22 +39,20 @@
             <div class="about-text">
               <h2>About Me</h2>
               <p>
-                Hello, I am <strong>Nikita Silwal</strong>, a computer
-                engineering pursuing student. I am interested in web
-                development.
+                Hello! I'm Nikita Silwal, a driven final year computer engineering student who has a strong interest in cutting-edge technology, web development, software 
+                development, and artificial intelligence. I enjoy using code to solve challenging issues and produce significant results.
               </p>
+
               <p>
-                नमस्ते, म <strong>निकीता सिलवाल</strong> हुँ, एक कम्प्युटर
-                इन्जिनियरिङ्ग अध्ययन गर्दै गरेको विद्यार्थी। म वेब विकासमा चासो
-                राख्छु।
+                With practical experience creating projects such as market price prediction models and blockchain-based eHealth apps, 
+                I hope to use my knowledge of Python, Flutter, and AI/ML to make a significant contribution to the tech sector.
               </p>
             </div>
             <div class="about-image">
               <img
                 src="files/profile.jpg"
-                alt="Nikita"
-                height="25%"
-                width="15%"
+                alt="Nikita Silwal smiling in her profile image"
+                class="responsive-img"
               />
             </div>
           </div>
@@ -90,41 +89,50 @@
         <div class="container">
           <h2 class="section-title">Projects</h2>
           <div class="projects-carousel">
-            <div class="project">
-              <h3>Market price Prediction</h3>
+            <article class="project">
+              <h3>Market Price Prediction</h3>
               <p>
-                Predicting the price of vegetables in market using LSTM and
-                transformer.
+                This is my minor project which analyzes the Kalimati food market prices using LSTM and Transformer models, comparing their effectiveness 
+                in predicting vegetable prices..
               </p>
-              <br />
               <a
                 href="https://github.com/NikitaSilwal07/Comparative-Alalysis-of-Kalimati-Vegetable-Market-Price-Prediction-Using-LSTM-and-Transformer"
                 class="btn"
                 >View on GitHub</a
               >
-            </div>
-            <div class="project">
+            </article>
+            <article class="project">
               <h3>Capstone Project</h3>
               <p>
-                Converting English date to Nepali with details like day, tithi
+                This program is a Nepali Date Converter that converts an English date (Gregorian calendar) to the corresponding Nepali date
+                (Bikram Sambat) and displays additional details such as the Nepali day of the week, Tithi (lunar phase), and any special 
+                events associated with that date..
               </p>
-              <br />
               <a
                 href="https://github.com/NikitaSilwal07/Capstone_project"
                 class="btn"
                 >View on GitHub</a
               >
-            </div>
-            <div class="project">
+            </article>
+            <article class="project">
               <h3>Flutter Mobile App</h3>
-              <p>A mobile app for medicine reminder.</p>
-              <br />
+              <p>A mobile app for medicine reminders using flutter.</p>
               <a
                 href="https://github.com/NikitaSilwal07/Major-project-_smart-health"
                 class="btn"
                 >View on GitHub</a
               >
-            </div>
+            </article>
+            <article class="project">
+              <h3>Smart Health : A blockchain based eHealthCare app with voice-authentication</h3>
+              <p>A health app using Flutter (Dart) that enables patients to book appointments,
+                 set reminders, and securely upload medical reports using AES encryption, IPFS and Solana blockchain.</p>
+              <a
+                href="https://github.com/NikitaSilwal07/Major-project-_smart-health"
+                class="btn"
+                >View on GitHub</a
+              >
+            </article>
           </div>
         </div>
       </section>
@@ -136,27 +144,35 @@
           <div class="contact-grid">
             <div class="contact-info">
               <p>
-                <i class="fa-regular fa-envelope"></i> silwalnikita@gmail.com
+                <i class="fa-regular fa-envelope"></i>
+                <a href="mailto:silwalnikita@gmail.com">silwalnikita@gmail.com</a>
               </p>
-              <p><i class="fa-solid fa-phone"></i> +977 9769760968</p>
+              <p>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+9779769760968">+977 9769760968</a>
+              </p>
             </div>
             <div class="social-icons">
-              <a href="https://www.linkedin.com/in/nikita-silwal-416577282/"
+              <a href="https://www.linkedin.com/in/nikita-silwal-416577282/" aria-label="LinkedIn Profile"
                 ><i class="fab fa-linkedin"></i
               ></a>
-              <a href="https://github.com/NikitaSilwal07"
+              <a href="https://github.com/NikitaSilwal07" aria-label="GitHub Profile"
                 ><i class="fab fa-github"></i
               ></a>
             </div>
           </div>
           <div class="cv-download">
-            <a href="files/CV.pdf" download="NikiaCV" class="btn"
+            <a href="files/CV.pdf" download="NikitaSilwal_CV" class="btn"
               >Download My CV</a
             >
           </div>
         </div>
       </section>
     </main>
+
+    <footer>
+      <p>© 2025 Nikita Silwal. All rights reserved.</p>
+    </footer>
 
     <script>
       function toggleMenu() {
